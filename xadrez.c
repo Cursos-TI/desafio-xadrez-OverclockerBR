@@ -3,7 +3,7 @@
 int main() {
 
     //char bispo, torre, rainha;
-    int casaBispo, casaTorre, casaRainha;
+    int casaBispo, casaTorre, casaRainha, casaCavalo;
     int escolha;
 
     // Mensagem inicial
@@ -12,6 +12,7 @@ int main() {
     printf("*** 1 - BISPO.\n");
     printf("*** 2 - TORRE.\n");
     printf("*** 3 - RAINHA.\n");
+    printf("*** 4 - CAVALO.\n");
 
     // Inicio da estrutura do código
     while (1){ // esse numero 1 significa TRUE
@@ -20,10 +21,10 @@ int main() {
             // Limpa o buffer de entrada após ler o inteiro
             while (getchar() != '\n'); 
 
-            if (escolha >= 1 && escolha <= 3) {
+            if (escolha >= 1 && escolha <= 4) {
                 break; // Sai do loop se a entrada for válida
             } else {
-                printf("Opção inválida. Por favor, digite um número entre 1 e 3.\n\n");
+                printf("Opção inválida. Por favor, digite um número entre 1 e 4.\n\n");
             }
         } else {
             printf("Entrada inválida. Por favor, digite um número inteiro.\n\n");
