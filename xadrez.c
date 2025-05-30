@@ -2,24 +2,21 @@
 
 int main() {
 
-    //Bispo: 5 casas na diagonal superior direita
-    //Torre: 5 casas para a direita
-    //Rainha: 8 casas para a esquerda
-
     //char bispo, torre, rainha;
     int casaBispo, casaTorre, casaRainha;
     int escolha;
 
+    // Mensagem inicial
     printf("Qual peça quer mover?\n\n");
 
     printf("*** 1 - BISPO.\n");
     printf("*** 2 - TORRE.\n");
     printf("*** 3 - RAINHA.\n");
 
-
-    while (1){
+    // Inicio da estrutura do código
+    while (1){ // esse numero 1 significa TRUE
         printf("\nSua escolha: ");
-        if (scanf("%d", &escolha) == 1) {
+        if (scanf("%d", &escolha) == 1) { // Jogador inseri sua escolha
             // Limpa o buffer de entrada após ler o inteiro
             while (getchar() != '\n'); 
 
@@ -35,7 +32,7 @@ int main() {
     }
     
     switch (escolha) {
-        case 1: { // Usar um bloco aqui para a declaração de escolhaBispo
+        case 1: { // Bispo
             int escolhaBispo;
             int casaBispo; // Declarar aqui para uso local
 
