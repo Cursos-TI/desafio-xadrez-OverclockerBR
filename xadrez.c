@@ -114,10 +114,51 @@ int main() {
             break; // Sai do switch case 2
         }
         case 3: { // Rainha
-            printf("Você escolheu RAINHA.\n");
-            printf("Rainha move 8 casas para a esquerda.\n\n");
-            // Adicione a lógica para a rainha aqui
-            break;
+            int escolhaRainha;
+            int casaRainha; // Declarar aqui para uso local
+
+            // Loop para validar a escolha da direção da Rainha
+            while (1) {
+                printf("Para qual direção deseja mover a RAINHA?\n\n");
+                printf("*** 1 - Direita.\n");
+                printf("*** 2 - Esquerda.\n");
+                printf("*** 3 - Para Cima.\n\n");
+                printf("Sua escolha: ");
+                
+                if (scanf("%d", &escolhaRainha) == 1) {
+                    // Limpa o buffer de entrada
+                    while (getchar() != '\n');
+
+                    if (escolhaRainha == 1) {
+                        printf("\nRainha moveu 5 casas para direita.\n\n");
+                        // Simulação do movimento, se necessário:
+                        for (casaRainha = 1; casaRainha <= 5; casaRainha++) {
+                            printf("Movendo 1 casa: Direita (casa %d de 5)\n", casaRainha);
+                        }
+                        break; // Sai do loop de direção
+                    } else if (escolhaRainha == 2) {
+                        printf("\nRainha moveu 5 casas para esquerda.\n\n");
+                        // Simulação do movimento, se necessário:
+                        for (casaRainha = 1; casaRainha <= 5; casaRainha++) {
+                            printf("Movendo 1 casa: Esquerda (casa %d de 5)\n", casaRainha);
+                        }
+                        break; // Sai do loop de direção
+                    } else if (escolhaRainha == 3) {
+                        printf("\nRainha moveu 5 casas para cima.\n\n");
+                        // Simulação do movimento, se necessário:
+                        for (casaRainha = 1; casaRainha <= 5; casaRainha++) {
+                            printf("Movendo 1 casa: Para cima (casa %d de 5)\n", casaRainha);
+                        }
+                        break; // Sai do loop de direção
+                    } else {
+                        printf("Opção de direção inválida. Por favor, digite 1 ou 2.\n\n");
+                    }
+                } else {
+                    printf("Entrada inválida. Por favor, digite um número inteiro.\n\n");
+                    while (getchar() != '\n'); // Limpa o buffer
+                }
+            }
+            break; // Sai do switch case 3
         }
         default: // Esta parte é redundante com a validação do loop 'while' acima do switch, mas mantida por clareza.
             printf("Opção inválida, tente novamente.\n\n");
@@ -126,19 +167,6 @@ int main() {
 
     return 0;
 }
-
-            
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
